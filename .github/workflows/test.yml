@@ -17,5 +17,6 @@ jobs:
       # step1 
       - name: GitHub - 执行的系统类型
         run: uname -an
-      - name: GitHub - 仓库中特定工作流程每个运行的唯一编号
-        run: echo $github.run_number
+      - name: GitHub - GITHUB_REF
+        run: echo "Deploying to production server on branch $GITHUB_REF"
+
