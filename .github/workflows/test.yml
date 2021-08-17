@@ -1,0 +1,20 @@
+# 相当于脚本用途的一个声明
+name: GitHub Action测试
+# 触发脚本的事件  这里为发布release之后触发
+on:
+  # 支持手动触发构建
+  workflow_dispatch:
+# 定义一个发行任务
+jobs:
+  test:
+    # 任务运行的环境
+    runs-on: ubuntu-20.04
+    strategy:
+      # When set to true, GitHub cancels all in-progress jobs if any matrix job fails. Default: true
+      fail-fast: false
+    # 任务的步骤
+    steps:
+      # step1 
+      - name: 测试步骤一
+        run: df -h
+  
