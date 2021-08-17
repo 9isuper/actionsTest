@@ -15,37 +15,7 @@ jobs:
     # 任务的步骤
     steps:
       # step1 
-      - name: GitHub - 正在运行的操作的名称
-        run: echo "$github.action"
-      - name: GitHub - 您的操作所在的路径。
-        run: echo "$github.action_path"
-      - name: GitHub - 发起工作流程运行的用户的登录名。
-        run: echo "$github.actor"
-      - name: GitHub - 工作流程运行中拉取请求的 base_ref 或目标分支
-        run: echo "$github.base_ref"
-      - name: GitHub - 触发工作流程运行的事件的名称。
-        run: echo "$github.event_name"
-      - name: GitHub - 运行器上完整事件 web 挂钩有效负载的路径。
-        run: echo "$github.event_path"
-      - name: GitHub - 工作流程运行中拉取请求的 head_ref 或来源分支
-        run: echo "$github.head_ref"
-      - name: GitHub - 当前作业的 job_id
-        run: echo "$github.job"
-      - name: GitHub - 所有者和仓库名称
-        run: echo "$github.repository"
-      - name: GitHub - 仓库所有者的名称
-        run: echo "$github.repository_owner"
-      - name: GitHub - 仓库中每个运行的唯一编号
-        run: echo "$github.run_id"
-      - name: GitHub - 仓库中每个运行的唯一编号
-        run: echo "$github.run_id"
+      - name: GitHub - 执行的系统类型
+        run: uname -an
       - name: GitHub - 仓库中特定工作流程每个运行的唯一编号
-        run: echo "$github.run_number"
-      - name: GitHub - 触发工作流程的提交 SHA。
-        run: echo "$github.sha"
-      - name: GitHub - 代表仓库上安装的 GitHub 应用程序进行身份验证的令牌。
-        run: echo "$github.token"
-      - name: GitHub - 工作流程的名称。
-        run: echo "$github.workflow"
-      - name: GitHub - 使用 checkout 操作时步骤的默认工作目录和仓库的默认位置。。
-        run: echo "$github.workspace"
+        run: echo $github.run_number
