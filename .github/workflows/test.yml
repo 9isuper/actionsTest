@@ -17,6 +17,16 @@ jobs:
       # step1 
       - name: GitHub - 执行的系统类型
         run: uname -an
+      - run: echo "打印默认环境变量 工作流程的名称。 $GITHUB_WORKFLOW"
+      - run: echo "打印默认环境变量 仓库中每个运行的唯一编号。 $GITHUB_RUN_ID"
+      - run: echo "打印默认环境变量 仓库中特定工作流程每个运行的唯一编号。 $GITHUB_RUN_NUMBER"
+      - run: echo "打印默认环境变量 当前作业的 job_id。 $GITHUB_JOB"
+      - run: echo "打印默认环境变量 操作唯一的标识符 (id)。 $GITHUB_ACTION"
+      - run: echo "打印默认环境变量 您的操作所在的路径。 $GITHUB_ACTION_PATH"
+      - run: echo "打印默认环境变量 当 GitHub Actions 运行工作流程时。 $GITHUB_ACTIONS"
+      - run: echo "打印默认环境变量 发起工作流程的个人或应用程序的名称。 $GITHUB_ACTOR"
+      - run: echo "打印默认环境变量 所有者和仓库名称。 $GITHUB_REPOSITORY"
+
       - run: echo "打印环境变量 触发工作流程的 web 挂钩事件的名称 $GITHUB_EVENT_NAME"
       - run: echo "打印环境变量 具有完整 web 挂钩事件有效负载的文件路径 $GITHUB_EVENT_PATH"
       - run: echo "打印环境变量 GitHub 工作空间目录路径 $GITHUB_WORKSPACE"
