@@ -17,6 +17,13 @@ jobs:
       # step1 
       - name: GitHub - 执行的系统类型
         run: uname -an
-      - name: GitHub - GITHUB_REF
-        run: echo "Deploying to production server on branch $GITHUB_REF"
-
+      - run: echo "打印环境变量 触发工作流程的 web 挂钩事件的名称 $GITHUB_EVENT_NAME"
+      - run: echo "打印环境变量 具有完整 web 挂钩事件有效负载的文件路径 $GITHUB_EVENT_PATH"
+      - run: echo "打印环境变量 GitHub 工作空间目录路径 $GITHUB_WORKSPACE"
+      - run: echo "打印环境变量 触发工作流程的提交 SHA $GITHUB_SHA"
+      - run: echo "打印环境变量 触发工作流程的分支或标记参考 $GITHUB_REF"
+      - run: echo "打印环境变量 仅为拉取请求事件设置。 头部分支的名称 $GITHUB_HEAD_REF"
+      - run: echo "打印环境变量 仅为拉取请求事件设置。 基础分支的名称 $GITHUB_BASE_REF"
+      - run: echo "打印环境变量 返回 GitHub 服务器的 URL $GITHUB_SERVER_URL"
+      - run: echo "打印环境变量 返回 API URL $GITHUB_API_URL"
+      - run: echo "打印环境变量 返回 GraphQL API URL $GITHUB_GRAPHQL_URL"
